@@ -1,17 +1,24 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 public class Main {
+    //Czy jest parzysta
+    public static boolean czyParzysta(int liczba) {
+        return liczba % 2 == 0;
+    }
+    // Czy jest dodatnia
+    public static boolean czyDodatnia(int liczba) {
+        return liczba > 0;
+    }
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        // Przykładowa liczba
+        int pLiczba = 10;
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+        if (czyParzysta(pLiczba) && czyDodatnia(pLiczba)) {
+            System.out.println("Liczba jest parzysta i dodatnia.");
+        } else if (czyParzysta(pLiczba)) {
+            System.out.println("Liczba jest parzysta, ale nie jest dodatnia.");
+        } else if (czyDodatnia(pLiczba)) {
+            System.out.println("Liczba nie jest parzysta, ale jest dodatnia.");
+        } else {
+            System.out.println("Liczba nie jest ani parzysta, ani dodatnia.");
         }
     }
 }
